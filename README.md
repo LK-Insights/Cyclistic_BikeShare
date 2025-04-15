@@ -122,3 +122,5 @@ Ride Duration Insights
   -	Members: Average ride duration is 12.6 minutes.
   -	Casual Riders: Average ride duration is 28.6 minutes.
 This information indicates that casual riders tend to take longer trips compared to members.
+
+https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Average_Ride_Length.png
