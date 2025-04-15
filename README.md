@@ -104,7 +104,7 @@ This careful preparation ensured an accurate and reliable dataset for analysis. 
 
 This rigorous data preparation process was essential in ensuring the dataset’s accuracy, consistency, and alignment with our business goals. It enabled us to perform a meaningful analysis of usage patterns between annual riders and casual riders, explore potential motivations for purchasing annual riderships, and develop recommendations for digital media strategies to increase conversions.
 
-### Excel:
+**Excel:**
 1.	Added ride_length formula: consisting of the time difference between Start_at and ended_at 
 2.	Deleted all records under 1 minute (see explanation in appendix).
 3.	Check for Duplications: No Duplications
@@ -116,7 +116,7 @@ Analyze Phase: Unveiling Cyclistic's Rider Behavior Patterns
 Understanding how different user groups engage with Cyclistic's bike-sharing services is crucial for tailoring offerings and marketing strategies. This analysis delves into the riding patterns of members versus casual riders, examining ride durations, preferences, and temporal trends to identify opportunities for enhancing user experience and increasing membership conversions.
 Let’s start with an overall look at the Length of rides by each rider type (Member vs. Casual riders)
 
-Ride Duration Insights
+#### Ride Duration Insights
 -	Overall Ride Lengths: The average ride duration across all users is 18 minutes.
 -	By Membership Type:
   -	Members: Average ride duration is 12.6 minutes.
@@ -124,3 +124,39 @@ Ride Duration Insights
 This information indicates that casual riders tend to take longer trips compared to members.
 
 https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Average_Ride_Length.png
+
+#### Temporal Riding Patterns
+-	Weekly Trends by Day:
+    -	Peak Usage: Saturday emerges as the most popular day for rides, especially among casual riders.
+    -	Rider Type Usage: Members show consistent usage throughout the week, suggesting routine commuting patterns.
+
+https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Ttl_Rides_by_weekday_stacked.png
+
+-	Monthly Usage Patterns - An analysis of monthly ride data reveals:
+    -	Summer Months (June - August): 
+        - Members: Consistently high usage, peaking in July with over 429,000 rides.
+        - Casual Riders: Steady increase, reaching a peak in August with over 354,000 rides.
+
+    -	Winter Months (December - February):
+        - Member: Reduced activity, with the lowest in December at approximately 134,700 rides.
+        - Casual Riders: There was a significant drop, with December seeing around 44,200 rides.
+
+-	Winter Months (December - February):
+    -	Member: Reduced activity, with the lowest in December at approximately 134,700 rides.
+    -	Casual Riders: There was a significant drop, with December seeing around 44,200 rides.
+    -	Winter Decline: A noticeable ride drop occurs during winter, particularly among casual riders.
+ 
+https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Season_Monthly_Trend.png
+
+#### Bike Type Preferences (base on 24-hour rides and under)
+-	Members:
+    -	Classic Bikes: Preferred choice, averaging 13.1 minutes.
+    -	Electric Bikes: Used for shorter trips, averaging 11.4 minutes.
+    -	Docked Bikes: Minimal usage.
+
+-	Casual Riders:
+    - Classic Bikes: The Average ride duration is 24.7 minutes.
+    - Electric Bikes: Average ride duration is 14.9 minutes.
+    - Docked Bikes: Significantly longer rides, averaging 51.9 minutes, indicating a preference for leisurely, extended trips.
+
+https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/AVG_Ride_by_Bike_n_Type.png
