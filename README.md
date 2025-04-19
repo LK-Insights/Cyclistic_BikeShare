@@ -6,5 +6,5 @@ This project explores a 12-month dataset of Cyclistic bike-share trips to better
 Contains the complete case study with embedded links to corresponding chart images.
 - **BikeShare-R-Language.ipynb** <br>
 Includes all R code—from installing libraries to data transformation and chart creation.
-- **BikeShare-SQL_Script.ipynb** (uploading soon) <br>
+- **BikeShare-SQL_v2.sql** (uploading soon) <br>
 Will contain SQL scripts used for querying and preparing the dataset.    
