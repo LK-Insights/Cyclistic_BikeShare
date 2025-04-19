@@ -86,7 +86,6 @@ The data, sourced from Cyclistic’s internal records, is maintained with a high
 
 To uphold data integrity, I took the following measures:
 -	Download the 12 monthly files into a folder on my computer title Org_Bike-Share.
--	
 -	Gained a thorough understanding of the data’s origin and potential limitations.
 -	Maintained backups of the original files.
 -	Tracked all changes to ensure a clear audit trail throughout the cleaning process.
@@ -135,11 +134,11 @@ Overall Ride Lengths: The average ride duration across all users is 18 minutes.
   -	Casual Riders: Average ride duration is 28.6 minutes.
 This information indicates that casual riders tend to take longer trips compared to members.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Ride_Lengths_Under_24Hrs.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Ride_Lengths_Under_24Hrs.png
 
 #### Ride Lengths Under 4 Hours (Zoomed-in Bar Chart)
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Ride_Length_under_4hrs.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Ride_Length_under_4hrs.png
 
 Insights:
   -	Most rides are concentrated under 60 minutes.
@@ -167,13 +166,13 @@ Filter out extreme ride lengths (e.g., over 24 hours = 1440 minutes)
 
 This information indicates that casual riders tend to take longer trips compared to members.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Average_Ride_Length.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Average_Ride_Length.png
 
 
 #### Total Ride Lengths by Rider Type: 
 Reveals the distribution across ride lengths, comparing casual and member ride patterns.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Ride_length_by_Type.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Ride_length_by_Type.png
 
 
 #### Insights:
@@ -191,18 +190,18 @@ Highlights usage trends during the week by rider type. Focuses on ride count, no
     -	Peak Usage: Saturday is the most popular day for rides, especially among casual riders.
     -	Rider Type Usage: Members show consistent usage throughout the week, suggesting routine commuting patterns.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Ttl_Rides_by_weekday_stacked.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Ttl_Rides_by_weekday_stacked.png
 
 
 #### Average Ride Length by Member Type and Weekday
 -	Casual riders consistently take longer rides than members, especially on weekends.
 -	Members’ rides are shorter and more uniform, likely due to commuting or routine trips.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/AVG_RideLength_Type_Weekday.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/AVG_RideLength_Type_Weekday.png
 
 #### Heatmap of Ride Frequency by Hour and Weekday
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/HeatMap_Ride_by_Hour_n_WKday.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/HeatMap_Ride_by_Hour_n_WKday.png
 
 #### Monthly Ride Trends by Rider Type (Line Chart):
 Tracks ridership growth/decline over time.
@@ -222,7 +221,7 @@ Tracks ridership growth/decline over time.
     -	Casual Riders: There was a significant drop, with December seeing around 44,200 rides.
     -	Winter Decline: A noticeable ride drop occurs during winter, particularly among casual riders.
  
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Season_Monthly_Trend.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Season_Monthly_Trend.png
 
 
 ### 4. Special Interest
@@ -237,10 +236,10 @@ https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Season_Monthly_Tren
     - Electric Bikes: Average ride duration is 14.9 minutes.
     - Docked Bikes: Significantly longer rides, averaging 51.9 minutes, indicating a preference for leisurely, extended trips.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/AVG_Ride_by_Bike_n_Type.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/AVG_Ride_by_Bike_n_Type.png
 
 #### Top 15 Stations for long Rides
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Top_15_Stations.png
+https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Top_15_Stations.png
 <br>
 <br>
 ### Key Takeaways
