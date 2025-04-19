@@ -35,7 +35,7 @@ The business goal is to understand the behavioral differences between casual rid
 -	**Cyclistic Marketing Analytics Team:** who are responsible for collecting, analyzing, and reporting data that helps guide Cyclistic marketing strategy. <BR>
 
 #### Deliverables for the project:
-  1. A clear statement of the business task
+  1.  A clear statement of the business task
   2.	A description of all data sources used
   3.	Documentation of any cleaning or manipulation of data
   4.	A summary of the analysis
@@ -82,9 +82,11 @@ This organized process will ensure that the data is ready for in-depth analysis 
 
 During the data preparation phase, I utilized Microsoft Excel 2016 for initial cleaning and manipulation. Given the dataset's size — over 5 million entries — I transitioned to RStudio for more efficient processing.
 
-The data, sourced from Cyclistic’s internal records, is maintained with a high level of credibility. However, like any dataset, it may contain inherent limitations or biases, as it primarily reflects user interactions within the Cyclistic bike-sharing system.
+The data, sourced from Cyclistic’s internal records, is maintained with a high level of credibility. However, like any dataset, it may contain inherent limitations or biases, as it primarily reflects user interactions within the Cyclistic bike-sharing system.Down
 
 To uphold data integrity, I took the following measures:
+-	Download the 12 monthly files into a folder on my computer title Org_Bike-Share.
+-	
 -	Gained a thorough understanding of the data’s origin and potential limitations.
 -	Maintained backups of the original files.
 -	Tracked all changes to ensure a clear audit trail throughout the cleaning process.
@@ -192,7 +194,7 @@ Highlights usage trends during the week by rider type. Focuses on ride count, no
 https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Ttl_Rides_by_weekday_stacked.png
 
 
-Average Ride Length by Member Type and Weekday
+#### Average Ride Length by Member Type and Weekday
 -	Casual riders consistently take longer rides than members, especially on weekends.
 -	Members’ rides are shorter and more uniform, likely due to commuting or routine trips.
 
@@ -202,7 +204,11 @@ https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/AVG_RideLength_Type
 
 https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/HeatMap_Ride_by_Hour_n_WKday.png
 
-#### Monthly Usage Patterns - An analysis of monthly ride data reveals:
+#### Monthly Ride Trends by Rider Type (Line Chart):
+Tracks ridership growth/decline over time.
+
+- Monthly Usage Patterns - An analysis of monthly ride data reveals:
+
     -	Summer Months (June - August): 
         - Members: Consistently high usage, peaking in July with over 429,000 rides.
         - Casual Riders: Steady increase, reaching a peak in August with over 354,000 rides.
@@ -232,4 +238,21 @@ https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Season_Monthly_Tren
     - Docked Bikes: Significantly longer rides, averaging 51.9 minutes, indicating a preference for leisurely, extended trips.
 
 https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/AVG_Ride_by_Bike_n_Type.png
+
+#### Top 15 Stations for long Rides
+https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Top_15_Stations.png
+<br>
+<br>
+### Key Takeaways
+-	Casual riders prefer longer, leisurely rides, often on weekends and using docked bikes.
+- ember exhibit consistent, shorter rides throughout the week, indicating routine usage.
+-	Seasonal variations significantly impact casual rider activity, suggesting potential for targeted promotions during off-peak periods.
+Strategic Implications
+
+#### To convert casual riders into members:
+-	Highlight Cost Savings: Emphasize the financial benefits of membership for frequent, long-duration riders.
+-	Flexible Membership Options: Introduce seasonal or weekend passes catering to casual riders' preferences.
+-	Targeted Marketing: Deploy campaigns during peak casual usage periods, focusing on the advantages of membership.
+By understanding and addressing the distinct behaviors and preferences of rider segments, Cyclistic can enhance user satisfaction and drive membership growth.
+
 
