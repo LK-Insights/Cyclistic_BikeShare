@@ -12,5 +12,5 @@ https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Bikeshare_Sql_v2.sq
 
 - **BikeShare-R-Language.ipynb** <br>
 Includes all R code—from installing libraries to data transformation and chart creation.<br>
-https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/BikeShare-R-Language.ipynb
+https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/BikeShare_R_Language.ipynb
 
