@@ -70,41 +70,46 @@ FROM (
     SELECT * 
     FROM [Bikeshare].dbo.Bikeshare_23 AS B
     WHERE COALESCE(B.ride_id, '') <> ''
-) AS AllRides;
+) AS Combined_Bikeshare;
 
 
 -- Total number of rows (Correct Number of records 5,633,613)
 SELECT COUNT(*) AS TotalRows FROM Combined_Bikeshare;
 
 
--- Check for Distinct values Results 5,631,598) **Discrempicy of 2015 records**
-SELECT 
-    COUNT(DISTINCT ride_id) AS DistinctRides,
-    COUNT(DISTINCT rideable_type) AS DistinctBikeTypes,
-	COUNT(DISTINCT started_at) AS Distinctstarted_at,
-	COUNT(DISTINCT ended_at) AS Distinctended_at
+-- Check for Distinct values Results 5,633,613) 
+SELECT COUNT(*) AS TotalRows,
+       COUNT(DISTINCT CONCAT(
+           ride_id, '|', 
+           rideable_type, '|', 
+           started_at, '|', 
+           ended_at, '|', 
+           start_station_name, '|', 
+           end_station_name, '|', 
+           member_casual
+       )) AS UniqueRowCount
 FROM Combined_Bikeshare;
 
 
--- This CTE assigns row numbers to duplicates with same ride_id (moved 2015 duplicate rows into doubles_All)
-WITH RankedDuplicates AS (
-    SELECT *,
-           ROW_NUMBER() OVER (PARTITION BY ride_id ORDER BY started_at) AS rn
-    FROM [Bikeshare].dbo.Combined_Bikeshare
-)
--- Select rows that are duplicates (i.e., row number > 1)
-SELECT *
-INTO Doubles_All
-FROM RankedDuplicates
-WHERE rn > 1;
+---- This CTE assigns row numbers to duplicates with same ride_id (moved duplicate rows into doubles_All)
+--WITH RankedDuplicates AS (
+--    SELECT *,
+--           ROW_NUMBER() OVER (PARTITION BY ride_id ORDER BY started_at) AS rn
+--    FROM [Bikeshare].dbo.Combined_Bikeshare
+--)
+---- Select rows that are duplicates (i.e., row number > 1)
+--SELECT *
+--INTO Doubles_All
+--FROM RankedDuplicates
+--WHERE rn > 1;
 
-WITH RankedDuplicates AS (
-    SELECT *,
-           ROW_NUMBER() OVER (PARTITION BY ride_id ORDER BY started_at) AS rn
-    FROM [Bikeshare].dbo.Combined_Bikeshare
-)
-DELETE FROM RankedDuplicates
-WHERE rn > 1;
+--WITH RankedDuplicates AS (
+--    SELECT *,
+--           ROW_NUMBER() OVER (PARTITION BY ride_id ORDER BY started_at) AS rn
+--    FROM [Bikeshare].dbo.Combined_Bikeshare
+--)
+--DELETE FROM RankedDuplicates
+--WHERE rn > 1;
 
 
 
@@ -112,12 +117,14 @@ WHERE rn > 1;
 SELECT 
     MAX(DATEDIFF(MINUTE, started_at, ended_at)) AS MaxRideMinutes,
     MIN(DATEDIFF(MINUTE, started_at, ended_at)) AS MinRideMinutes,
-    AVG(CAST(DATEDIFF(SECOND, started_at, ended_at) AS FLOAT)) / 60 AS AvgRideMinutes
+    AVG(CAST(DATEDIFF(SECOND, started_at, ended_at) AS Numeric)) / 60 AS AvgRideMinutes
 FROM Combined_Bikeshare
 WHERE started_at IS NOT NULL AND ended_at IS NOT NULL;
 
 -- MaxRideMinutes	MinRideMinutes	AvgRideMinutes
--- 51462	1	18.655755258099
+-- 51462			1				18.654888
+
+
 
 --Preferred Bike Types - Total riders per weekday per rider type
 
@@ -129,17 +136,23 @@ FROM Combined_Bikeshare
 GROUP BY DATENAME(WEEKDAY, started_at), member_casual
 ORDER BY Weekday;
 
+--Results:
+--Weekday	member_casual	TotalRides
+--Friday	member			508000
+--Friday	casual			330170
+--Monday	casual			254248
+--Monday	member			493376
+--Saturday	member			453759
+--Saturday	casual			428962
+--Sunday	member			380236
+--Sunday	casual			327670
+--Thursday	casual			284938
+--Thursday	member			560413
+--Tuesday	casual			253097
+--Tuesday	member			543135
+--Wednesday	casual			258554
+--Wednesday	member			557055
 
--- Results:
-Weekday	member_casual	TotalRides
-Sunday	member	380099
-Sunday	casual	327542
-Thursday	casual	284846
-Thursday	member	560192
-Tuesday	casual	252983
-Tuesday	member	542951
-Wednesday	casual	258478
-Wednesday	member	556845
 
 
 -- Average ride length per weekday per rider type
@@ -153,21 +166,23 @@ GROUP BY DATENAME(WEEKDAY, started_at), member_casual
 ORDER BY Weekday;
 
 -- Results:
-Weekday	member_casual	AvgRideMinutes
-Friday	member	12.5675547416509
-Friday	casual	27.8002332979852
-Monday	casual	27.6633513003108
-Monday	member	12.0283756247402
-Saturday	member	14.1083298794522
-Saturday	casual	33.0701117767916
-Sunday	member	13.9139276872604
-Sunday	casual	33.5364808177272
-Thursday	casual	24.2099064055665
-Thursday	member	12.0918613618188
-Tuesday	casual	25.5256440156058
-Tuesday	member	12.1032174174097
-Wednesday	casual	24.4362228119995
-Wednesday	member	11.9816879023786
+----Weekday	member_casual	AvgRideMinutes
+----Friday	member	12.5672952755906
+----Friday	casual	27.7970166883727
+----Monday	casual	27.6640288222523
+----Monday	member	12.0279502853807
+----Saturday	member	14.1079780235764
+----Saturday	casual	33.0682974249467
+----Sunday	member	13.9134406000484
+----Sunday	casual	33.5355632190924
+----Thursday	casual	24.2064940443184
+----Thursday	member	12.0919910851461
+----Tuesday	casual	25.5220330545206
+----Tuesday	member	12.1029430988612
+----Wednesday	casual	24.4337159742259
+----Wednesday	member	11.982007162668
+
+
 
 -- Summary Stats - Create a table to store summary stats
 SELECT 
@@ -179,6 +194,7 @@ INTO Summary_RideStats
 FROM Combined_Bikeshare
 WHERE started_at IS NOT NULL AND ended_at IS NOT NULL
 GROUP BY DATENAME(WEEKDAY, started_at), member_casual;
+
 
 
 -- Exploring Interesting Trends (Example: Longest rides)
@@ -208,6 +224,7 @@ GROUP BY rideable_type
 ORDER BY RideCount DESC;
 
 rideable_type	RideCount
-electric_bike	3042606
-classic_bike	2460889
-docked_bike  	128103
+electric_bike	3043666
+classic_bike	2461795
+docked_bike		128152
+
