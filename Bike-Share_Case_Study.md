@@ -5,8 +5,8 @@ By Lillian Kaiser - October 2023
 
 In this case study, the business task is to analyze historical bike trip data of Cyclistic, a bike-share company in Chicago, to understand how casual riders and Members use Cyclistic bikes differently. Cyclistic operates a successful bike-share business with 5,824 bicycles and 692 stations in Chicago. The company offers two Rider Types:
 
--	Casual Riders: These are customers who purchase single-ride or full-day passes, indicating they use the service infrequently or on a pay-as-you-go basis.<br>
--	Member: These are subscribers who pay for annual fee, providing them with unlimited access to the bikes throughout the year.<br>
+-	**Casual Riders:** These are customers who purchase single-ride or full-day passes, indicating they use the service infrequently or on a pay-as-you-go basis.<br>
+-	**Member:** These are subscribers who pay an annual fee, providing them with unlimited access to the bikes throughout the year.<br>
 
 The primary objective is to gain insights from the data that will help the marketing team develop a new strategy to convert casual riders into annual riders. To do this, the analysis will likely involve examining various aspects of bike usage by both types of customers, including ride frequency, trip duration, and popular riding days. The findings can be used to tailor marketing strategies that encourage casual riders to become members and thereby increase the company's recurring revenue.
 
@@ -25,8 +25,8 @@ Moreno’s goal is to develop marketing strategies focused on this conversion. T
 The Google Data Analytics Professional Certificate uses a methodology for data analysis which involves 6 phrases:  ASK, PREPARE, PROCESS, ANALYSE, SHARE AND ACT
 
 ## Ask – Understanding the project and problem that needs solving <br>
-Business Task: Define the Problem:
-The challenge at hand is to create a data-driven marketing campaign that will effectively convert casual riders of Cyclistic, a bike-share company in Chicago, into annual riders. The future success of Cyclistic heavily relies on maximizing the number of annual riderships. The director of marketing, Lily Moreno, envisions a comprehensive strategy that not only attracts new customers but also capitalizes on the existing awareness of the Cyclistic program among casual riders.
+Business Task: Define the Problem:<br>
+The challenge at hand is to create a data-driven marketing campaign that will effectively convert casual riders of Cyclistic, a bike-share company in Chicago, into annual riders. The future success of Cyclistic heavily relies on maximizing the number of annual riderships. The director of marketing, Lily Moreno, envisions a comprehensive strategy that not only attracts new customers but also capitalizes on the existing awareness of the Cyclistic program among casual riders.<br>
 The business goal is to understand the behavioral differences between casual riders and annual riders, in order to develop data-driven strategies that encourage casual riders to become annual riders.
 
 #### Stakeholders:
@@ -40,7 +40,7 @@ The business goal is to understand the behavioral differences between casual rid
   3.	Documentation of any cleaning or manipulation of data
   4.	A summary of the analysis
   5.	Supporting visualizations and key findings
-  6. Top three recommendations based on the analysis
+  6.  Top three recommendations based on the analysis
 
 #### Three questions that will guide the marketing project:
   1.	How do annual riders and casual riders use Cyclistic bikes differently?
@@ -91,7 +91,7 @@ To uphold data integrity, I took the following measures:
 -	Tracked all changes to ensure a clear audit trail throughout the cleaning process.
 
 ### Data Issues Addressed:
--	Performed a duplicate check using all columns, then deleted duplicates.
+-	Performed a duplicate check using ride_id, started_at, then deleted duplicates.
 -	Removed rows with invalid ride_id values (e.g., ##################), as these were duplicates of entries with valid IDs.
 -	Detected corrupted ride_ids (e.g., 1.11+14) likely caused by data type or encoding issues during import. These were corrected when possible or removed if unverifiable.
 -	Calculated ride duration by subtracting started_at from ended_at, then removed entries with negative or zero durations.
@@ -105,29 +105,67 @@ This careful preparation ensured an accurate and reliable dataset for analysis. 
 
 This rigorous data preparation process was essential in ensuring the dataset’s accuracy, consistency, and alignment with our business goals. It enabled us to perform a meaningful analysis of usage patterns between annual riders and casual riders, explore potential motivations for purchasing annual riderships, and develop recommendations for digital media strategies to increase conversions.
 
-**Excel:**
+Transform the data
+ 
 1.	Added ride_length formula: consisting of the time difference between Start_at and ended_at 
 2.	Deleted all records under 1 minute (see explanation in appendix).
 3.	Check for Duplications: No Duplications
-4.	Remove unnecessary columns to reduce file size: start_lat, start_lng, end_lat, end_lng, started_stationID, and ended_StationID <br>
+4.	Remove unnecessary columns to reduce file size and increase functionality: start_lat, start_lng, end_lat, end_lng, started_stationID, and ended_StationID
+5.	Calculated ride duration by subtracting started_at from ended_at, then removed entries with negative or zero durations. 
+6.	Excluded rides lasting less than one minute, as these likely did not represent meaningful usage behavior. This decision was made to ensure focus on typical ride patterns relevant to our business questions
+7.	Created new column called “ride_length”, to calculate the length of each ride by subtracting the column “started_at” from the column “ended_at” and format as HH:MM:SS. Then, manually check calculation. 
+8.	Created new column called “weekday”, to calculate the day of the week, using the weekday function. Formated as number.
+9.	Save all files into CSV format
  
 
 ## Analyze - A summary of your analysis
 Analyze Phase: Unveiling Cyclistic's Rider Behavior Patterns - Provides key statistics for all rides up to 24 hours in length.
-Understanding how different user groups engage with Cyclistic's bike-sharing services is crucial for tailoring offerings and marketing strategies. This analysis delves into the riding patterns of members versus casual riders, examining ride durations, preferences, and temporal trends to identify opportunities for enhancing user experience and increasing membership conversions.
+Understanding how different user groups engage with Cyclistic's bike-sharing services is crucial for tailoring offerings and marketing strategies. This analysis delves into the riding patterns of members versus casual riders, examining ride durations, preferences, and temporal trends to identify opportunities for enhancing user experience and increasing membership conversions.<br>
 Let’s start with an overall look at the Length of rides by each rider type (Member vs. Casual riders)
 
 ### 1. Distribution Overview
+**Utilizing Excel:**
+
 #### Ride Duration Overview (summary table) - Provides key statistics for all rides up to 24 hours in length.
 
 - Ride Duration Overview for Bikeshare_all_wdate Dataset
-
 
 | Member_Casual | Median ride |  Max ride  | Min riden	| 
 |---------------|-------------|------------|------------|
 |  18.6 mins    |   10 mins   | 51462 mins |   1 min    |   
 
 Overall Ride Lengths: The average ride duration across all users is 18 minutes.
+
+**Check information**
+**Pivot Table with corresponding Chart:**
+
+
+
+
+
+
+
+**Utilizing SQL Server management Stutio:**
+<pre>
+-Created Bikeshare database (manually)
+-Create two tables from Import files Bikeshare_22 and Bikeshare_23
+-Check the record count in each table for comparison to the original files
+-Removed blank column labeled Column1 from tables
+-Combine both year tables into Combined_Bikeshare Explore 
+-Total number of records in Combined_Bikeshare
+-Check for Distinct values in Combined_Bikeshare
+-Check for Duplicates
+  
+  Create and Ran Query for:
+  1	Basic Summary Stats - Max, Min, and Mean ride duration 
+  2	Summary Stats - Create a table to store summary stats
+  3	Preferred Bike Types - Total riders per weekday per rider type
+  4	Average ride length per weekday per rider type
+  Exploring Interesting Trends:
+  5	Top 10 longest rides
+  6	Ride count by bike type
+</pre>
+
 
 -	By Membership Type:
   -	Members: Average ride duration is 12.6 minutes.
