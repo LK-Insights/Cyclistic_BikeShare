@@ -125,6 +125,17 @@ WHERE started_at IS NOT NULL AND ended_at IS NOT NULL;
 -- 51462			1				18.654888
 
 
+-- Summary Stats - Create a table to store summary stats
+SELECT 
+    DATENAME(WEEKDAY, started_at) AS Weekday,
+    member_casual,
+    COUNT(*) AS TotalRides,
+    AVG(CAST(DATEDIFF(SECOND, started_at, ended_at) AS FLOAT)) / 60 AS AvgRideMinutes
+INTO Summary_RideStats
+FROM Combined_Bikeshare
+WHERE started_at IS NOT NULL AND ended_at IS NOT NULL
+GROUP BY DATENAME(WEEKDAY, started_at), member_casual;
+
 
 --Preferred Bike Types - Total riders per weekday per rider type
 
@@ -181,19 +192,6 @@ ORDER BY Weekday;
 ----Tuesday	member	12.1029430988612
 ----Wednesday	casual	24.4337159742259
 ----Wednesday	member	11.982007162668
-
-
-
--- Summary Stats - Create a table to store summary stats
-SELECT 
-    DATENAME(WEEKDAY, started_at) AS Weekday,
-    member_casual,
-    COUNT(*) AS TotalRides,
-    AVG(CAST(DATEDIFF(SECOND, started_at, ended_at) AS FLOAT)) / 60 AS AvgRideMinutes
-INTO Summary_RideStats
-FROM Combined_Bikeshare
-WHERE started_at IS NOT NULL AND ended_at IS NOT NULL
-GROUP BY DATENAME(WEEKDAY, started_at), member_casual;
 
 
 
