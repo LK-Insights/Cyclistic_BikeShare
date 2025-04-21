@@ -137,11 +137,11 @@ Let’s start with an overall look at the Length of rides by each rider type (Me
 Overall Ride Lengths: The average ride duration across all users is 18 minutes.
 
 **Check information**
-**Pivot Table with corresponding Chart:**
+**Pivot Table with corresponding Chart:**<br>
 
 
 
-
+Insert Excel PDF
 
 
 
@@ -155,7 +155,7 @@ Overall Ride Lengths: The average ride duration across all users is 18 minutes.
 -Total number of records in Combined_Bikeshare
 -Check for Distinct values in Combined_Bikeshare
 -Check for Duplicates
-  
+  <br>
   Create and Ran Query for:
   1	Basic Summary Stats - Max, Min, and Mean ride duration 
   2	Summary Stats - Create a table to store summary stats
