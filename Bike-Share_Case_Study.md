@@ -139,9 +139,9 @@ Overall Ride Lengths: The average ride duration across all users is 18 minutes.
 **Check information**
 **Pivot Table with corresponding Chart:**<br>
 
-![title](Bikeshare_Charts/AVG_Ride_by_Bike_n_Type.png)
+![title](Bikeshare_Charts/Excel__Type_by_member.png)
 
-
+![title](Bikeshare_Charts/Excel_Bike_Type_by_member.png)
 
 **Utilizing SQL Server management Stutio:**
 <pre>
