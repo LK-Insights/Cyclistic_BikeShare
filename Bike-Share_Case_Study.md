@@ -124,7 +124,7 @@ Understanding how different user groups engage with Cyclistic's bike-sharing ser
 Let’s start with an overall look at the Length of rides by each rider type (Member vs. Casual riders)
 
 ### 1. Distribution Overview
-**Utilizing Excel:**Pivot tables and Charts
+**Utilizing Excel:** Pivot tables and Charts
 
 #### Ride Duration Overview (summary table) - Provides key statistics for all rides up to 24 hours in length.
 
@@ -167,14 +167,22 @@ Overall Ride Lengths: The average ride duration across all users is 18 minutes.
   6	Ride count by bike type
 </pre>
 
-View SQL Code:
-https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Sql_v2.sql
+View SQL Code: https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Sql_v2.sql
+<br><br>
 
-**Utilizing R Studio:**
+**The following analysis was conducted in R Studio:**;
+<pre>
+1. Import the data
+2. Explore the data for Analysis
+3. Clean up and add data to prepare for analysis
+4. Conduct descriptive analysis
+5. Export summary file for further analysis
+  
+</pre>
+<br>
+View R Language Code: https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_R_Language.ipynb
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_R_Language.ipynb
-
-
+<br><br>
 By Membership Type:
   -	Members: Average ride duration is 12.6 minutes.
   -	Casual Riders: Average ride duration is 28.6 minutes.
