@@ -141,6 +141,8 @@ Overall Ride Lengths: The average ride duration across all users is 18 minutes.
 
 ![title](Bikeshare_Charts/Excel__Type_by_member.png)
 
+![title](Bikeshare_Charts/Excel_Single_Month_View.png)
+
 ![title](Bikeshare_Charts/Excel_Bike_Type_by_member.png)
 
 **Utilizing SQL Server management Stutio:**
@@ -176,14 +178,7 @@ This information indicates that casual riders tend to take longer trips compared
 
 ![title](Bikeshare_Charts//Ride_Length_under_4hrs.png
 
-
-
-
-
-
-0
-
-Insights:
+**Insights:**
   -	Most rides are concentrated under 60 minutes.
   -	Very few users take rides longer than 3 hours.
   -	A sudden drop after 180 minutes indicates these longer rides are outliers or less common use cases.
@@ -259,10 +254,7 @@ Tracks ridership growth/decline over time.
         - Member: Reduced activity, with the lowest in December at approximately 134,700 rides.
         - Casual Riders: There was a significant drop, with December seeing around 44,200 rides.
 
--	Winter Months (December - February):
-    -	Member: Reduced activity, with the lowest in December at approximately 134,700 rides.
-    -	Casual Riders: There was a significant drop, with December seeing around 44,200 rides.
-    -	Winter Decline: A noticeable ride drop occurs during winter, particularly among casual riders.
+Winter Decline: A noticeable ride drop occurs during winter, particularly among casual riders.
  
 ![title](Bikeshare_Charts/Season_Monthly_Trend.png)
 
@@ -297,4 +289,35 @@ Strategic Implications
 -	Targeted Marketing: Deploy campaigns during peak casual usage periods, focusing on the advantages of membership.
 By understanding and addressing the distinct behaviors and preferences of rider segments, Cyclistic can enhance user satisfaction and drive membership growth.
 
+## Share - Supporting visualizations and key findings
 
+After conducting a comprehensive analysis of the Cyclistic bike-share data, the following insights and visualizations were developed to address the marketing team’s key business questions. These findings have been curated to support effective communication with stakeholders, including the marketing director and executive team.
+
+Key Findings & Data Narratives
+
+1. Casual Riders Take Longer Trips
+Despite accounting for 45% of total riders, casual users consistently record ride durations that are nearly twice as long as those of members. This trend is present across all days of the week, indicating that casual riders often use the service for more leisurely or recreational purposes.
+
+2. Peak Usage Days Differ Between Groups
+Casual riders favor weekends—especially Saturdays, the highest-traffic day—while members show more consistent usage throughout weekdays, likely reflecting commuting behavior. This contrast suggests different user intent and habits between the two groups.
+
+3. Bike Type Preferences Reveal Behavioral Patterns
+•	Electric bikes are popular with both members and casual users due to their convenience.
+•	Classic bikes are more frequently used by members, likely for cost efficiency.
+•	Docked bikes are exclusively used by casual riders, suggesting a preference for one-time or spontaneous trips.
+
+4. Seasonality and Usage Patterns
+Monthly usage data indicates higher ride volumes in warmer months (May–September), particularly among casual users. This aligns with patterns in recreational and tourism-based usage.
+
+## Act - Your top three recommendations based on your analysis
+
+Three questions that will guide the marketing project:
+1.	How do Annual riderss and casual riders use Cyclistic bikes differently?
+2.	Why would casual riders buy Cyclistic Annual ridersships?  
+3.	How can Cyclistic use digital media to influence casual riders to become members?
+
+  	 <--Insert Here -->
+  	
+Added Note:
+User Bike Preferences Analysis
+The data shows that electric bikes are popular with both members and casual riders, likely because of their convenience and speed. Classic bikes tend to be more popular among members, possibly due to cost savings. On the other hand, docked bikes are used only by casual riders, which might mean that members prefer the flexibility of undocked bikes. These insights offer valuable guidance for improving bike placement, adjusting pricing, and customizing marketing to better cater to the preferences of each rider group. 
