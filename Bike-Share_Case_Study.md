@@ -139,9 +139,7 @@ Overall Ride Lengths: The average ride duration across all users is 18 minutes.
 **Check information**
 **Pivot Table with corresponding Chart:**<br>
 
-
-
-Insert Excel PDF
+![title](Bikeshare_Charts/AVG_Ride_by_Bike_n_Type.png)
 
 
 
@@ -172,7 +170,7 @@ Insert Excel PDF
   -	Casual Riders: Average ride duration is 28.6 minutes.
 This information indicates that casual riders tend to take longer trips compared to members.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Ride_Lengths_Under_24Hrs.png
+![title](Bikeshare_Charts/Bikeshare_Charts/Ride_Lengths_Under_24Hrs.png)
 
 #### Ride Lengths Under 4 Hours (Zoomed-in Bar Chart)
 
@@ -204,13 +202,13 @@ Filter out extreme ride lengths (e.g., over 24 hours = 1440 minutes)
 
 This information indicates that casual riders tend to take longer trips compared to members.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Average_Ride_Length.png
+![title](Bikeshare_Charts/Average_Ride_Length.png)
 
 
 #### Total Ride Lengths by Rider Type: 
 Reveals the distribution across ride lengths, comparing casual and member ride patterns.
 
-https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_Charts/Ride_length_by_Type.png
+![title](Bikeshare_Charts/Ride_length_by_Type.png)
 
 
 #### Insights:
