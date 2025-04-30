@@ -202,7 +202,7 @@ This information indicates that casual riders tend to take longer trips compared
 ### 2. Comparative Ride Length by User Type
 
 #### Ride Duration Summary Table (by Rider Type):
-#### Breaks down average, median, and standard deviation of ride durations for casual vs. member users.
+**Breaks down average, median, and standard deviation of ride durations for casual vs. member users.**
 
 | Member_Casual | Avg_duration | Med_duration | SD_duration	| Max_duration	| Min_duration|
 |---------------|--------------|--------------|-------------|---------------|-------------|
@@ -229,7 +229,7 @@ Reveals the distribution across ride lengths, comparing casual and member ride p
 ![title](Bikeshare_Charts/Ride_length_by_Type.png)
 
 
-#### Insights:
+**Insights:**
 -	Casual riders take longer individual rides than members, possibly due to leisure use.
 -	Members are likely using the bikes more frequently but for shorter, utilitarian trips (e.g., commuting).
 -	Casual riders show more activity on weekends, suggesting recreational behavior.
@@ -256,7 +256,7 @@ Highlights usage trends during the week by rider type. Focuses on ride count, no
 #### Ride Frequency Heatmap by Hour and Weekday
 This heatmap visualizes the volume of bike-share rides across different hours of the day and days of the week. The x-axis represents the days of the week (Monday through Sunday), while the y-axis denotes the hours of the day (0 to 23). Each cell's color intensity corresponds to the number of rides initiated during that specific hour on that particular day.​
 
-#### Key Observations:
+**Key Observations:**
 
 - Weekday Commuting Peaks: There is a noticeable increase in ride frequency during weekday mornings (approximately 7 AM to 9 AM) and evenings (around 4 PM to 6 PM), aligning with typical commuting hours.​
 
@@ -304,17 +304,11 @@ Winter Decline: A noticeable ride drop occurs during winter, particularly among 
 ![title](Bikeshare_Charts/Top_15_Stations.png)
 <br>
 <br>
-### Key Takeaways
+**Key Takeaways**
 -	Casual riders prefer longer, leisurely rides, often on weekends and using docked bikes.
 - Members exhibit consistent, shorter rides throughout the week, indicating routine usage.
 -	Seasonal variations significantly impact casual rider activity, suggesting potential for targeted promotions during off-peak periods.
 Strategic Implications
-
-#### To convert casual riders into members:
--	Highlight Cost Savings: Emphasize the financial benefits of membership for frequent, long-duration riders.
--	Flexible Membership Options: Introduce seasonal or weekend passes catering to casual riders' preferences.
--	Targeted Marketing: Deploy campaigns during peak casual usage periods, focusing on the advantages of membership.
-By understanding and addressing the distinct behaviors and preferences of rider segments, Cyclistic can enhance user satisfaction and drive membership growth.
 
 ## Share - Supporting visualizations and key findings
 
