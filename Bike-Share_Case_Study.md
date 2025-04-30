@@ -118,7 +118,7 @@ Transform the data
 9.	Save all files into CSV format
  
 
-## Analyze - A summary of your analysis
+## Analyze - Summary of Analy
 Analyze Phase: Unveiling Cyclistic's Rider Behavior Patterns - Provides key statistics for all rides up to 24 hours in length.
 Understanding how different user groups engage with Cyclistic's bike-sharing services is crucial for tailoring offerings and marketing strategies. This analysis delves into the riding patterns of members versus casual riders, examining ride durations, preferences, and temporal trends to identify opportunities for enhancing user experience and increasing membership conversions.<br>
 Let’s start with an overall look at the Length of rides by each rider type (Member vs. Casual riders)
@@ -145,7 +145,7 @@ Overall Ride Lengths: The average ride duration across all users is 18 minutes.
 
 ![title](Bikeshare_Charts/Excel_Bike_Type_by_member.png)
 
-**Utilizing SQL Server management Stutio:**
+**Utilizing SQL Server Management Studio:**
 <pre>
 -Created Bikeshare database (manually)
 -Create two tables from Import files Bikeshare_22 and Bikeshare_23
@@ -183,6 +183,7 @@ View SQL Code: https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bike
 View R Language Code: https://github.com/LK-Insights/Cyclistic_BikeShare/blob/main/Bikeshare_R_Language.ipynb
 
 <br><br>
+#### Ride Lengths under 24 Hours
 Revealing typical and unusual ride lengths. As a result, this chart reveals a significant drop in rides over 4 hours in length (240 minutes)
 
 ![title](Bikeshare_Charts/Ride_Lengths_Under_24Hrs.png)
