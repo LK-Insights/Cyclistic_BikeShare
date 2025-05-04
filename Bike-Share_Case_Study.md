@@ -190,7 +190,7 @@ Revealing typical and unusual ride lengths. As a result, this chart reveals a si
 
 #### Ride Lengths Under 4 Hours (Zoomed-in Bar Chart)
 
-![title](Bikeshare_Charts//Ride_Length_under_4hrs.png
+![title](Bikeshare_Charts//Ride_Length_under_4hrs.png)
 
 **Insights:**
   -	Most rides are concentrated under 60 minutes.
