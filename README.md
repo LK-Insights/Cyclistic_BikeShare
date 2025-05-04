@@ -6,7 +6,7 @@ This project explores a 12-month dataset of Cyclistic bike-share trips to better
 The complete case study contains embedded links to the corresponding code files and chart images.<br>
 https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Bike-Share_Case_Study.md
 
-- **BikeShare-SQL_v2.sql** (uploading soon) <br>
+- **BikeShare-SQL_v2.sql** <br>
 Will contain SQL scripts used for querying and preparing the dataset. Bikeshare_Sql_v2.sql <br>
 https://github.com/LK-Insights/Cyclistic_BikeShare/tree/main/Bikeshare_Sql_v2.sql
 
